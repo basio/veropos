@@ -119,8 +119,8 @@ namespace Samba.Modules.BasicReports.Reports.EndOfDayReport
             report.AddColumTextAlignment("GelirlerTablosu", TextAlignment.Left, TextAlignment.Right, TextAlignment.Right);
             report.AddTable("GelirlerTablosu", Resources.Incomes, "", "");
             report.AddRow("GelirlerTablosu", Resources.Cash, ac.CashPercent, ac.CashTotal.ToString(ReportContext.CurrencyFormat));
-            report.AddRow("GelirlerTablosu", Resources.CreditCard, ac.CreditCardPercent, ac.CreditCardTotal.ToString(ReportContext.CurrencyFormat));
-            report.AddRow("GelirlerTablosu", Resources.Voucher, ac.TicketPercent, ac.TicketTotal.ToString(ReportContext.CurrencyFormat));
+            //report.AddRow("GelirlerTablosu", Resources.CreditCard, ac.CreditCardPercent, ac.CreditCardTotal.ToString(ReportContext.CurrencyFormat));
+            //report.AddRow("GelirlerTablosu", Resources.Voucher, ac.TicketPercent, ac.TicketTotal.ToString(ReportContext.CurrencyFormat));
             report.AddRow("GelirlerTablosu", Resources.AccountBalance, ac.AccountPercent, ac.AccountTotal.ToString(ReportContext.CurrencyFormat));
             report.AddRow("GelirlerTablosu", Resources.TotalIncome.ToUpper(), "", ac.TotalAmount.ToString(ReportContext.CurrencyFormat));
 
@@ -220,8 +220,8 @@ namespace Samba.Modules.BasicReports.Reports.EndOfDayReport
                     report.AddColumTextAlignment(departmentInfo.DepartmentName + Resources.Incomes, TextAlignment.Left, TextAlignment.Right, TextAlignment.Right);
                     report.AddTable(departmentInfo.DepartmentName + Resources.Incomes, string.Format(Resources.Incomes_f, departmentInfo.DepartmentName), "", "");
                     report.AddRow(departmentInfo.DepartmentName + Resources.Incomes, Resources.Cash, GetPercent(0, dPayments), GetAmount(0, dPayments).ToString(ReportContext.CurrencyFormat));
-                    report.AddRow(departmentInfo.DepartmentName + Resources.Incomes, Resources.CreditCard, GetPercent(1, dPayments), GetAmount(1, dPayments).ToString(ReportContext.CurrencyFormat));
-                    report.AddRow(departmentInfo.DepartmentName + Resources.Incomes, Resources.Voucher, GetPercent(2, dPayments), GetAmount(2, dPayments).ToString(ReportContext.CurrencyFormat));
+                    //report.AddRow(departmentInfo.DepartmentName + Resources.Incomes, Resources.CreditCard, GetPercent(1, dPayments), GetAmount(1, dPayments).ToString(ReportContext.CurrencyFormat));
+                    //report.AddRow(departmentInfo.DepartmentName + Resources.Incomes, Resources.Voucher, GetPercent(2, dPayments), GetAmount(2, dPayments).ToString(ReportContext.CurrencyFormat));
                     report.AddRow(departmentInfo.DepartmentName + Resources.Incomes, Resources.AccountBalance, GetPercent(3, dPayments), GetAmount(3, dPayments).ToString(ReportContext.CurrencyFormat));
                     report.AddRow(departmentInfo.DepartmentName + Resources.Incomes, Resources.TotalIncome, "", dPayments.Sum(x => x.Amount).ToString(ReportContext.CurrencyFormat));
 
@@ -366,8 +366,8 @@ namespace Samba.Modules.BasicReports.Reports.EndOfDayReport
                     report.AddColumTextAlignment(userInfo.UserName + Resources.Incomes, TextAlignment.Left, TextAlignment.Right, TextAlignment.Right);
                     report.AddTable(userInfo.UserName + Resources.Incomes, string.Format(Resources.ReceivedBy_f, userInfo.UserName), "", "");
                     report.AddRow(userInfo.UserName + Resources.Incomes, Resources.Cash, GetPercent(0, uPayments), GetAmount(0, uPayments).ToString(ReportContext.CurrencyFormat));
-                    report.AddRow(userInfo.UserName + Resources.Incomes, Resources.CreditCard, GetPercent(1, uPayments), GetAmount(1, uPayments).ToString(ReportContext.CurrencyFormat));
-                    report.AddRow(userInfo.UserName + Resources.Incomes, Resources.Voucher, GetPercent(2, uPayments), GetAmount(2, uPayments).ToString(ReportContext.CurrencyFormat));
+                    //report.AddRow(userInfo.UserName + Resources.Incomes, Resources.CreditCard, GetPercent(1, uPayments), GetAmount(1, uPayments).ToString(ReportContext.CurrencyFormat));
+                    //report.AddRow(userInfo.UserName + Resources.Incomes, Resources.Voucher, GetPercent(2, uPayments), GetAmount(2, uPayments).ToString(ReportContext.CurrencyFormat));
                     report.AddRow(userInfo.UserName + Resources.Incomes, Resources.AccountBalance, GetPercent(3, uPayments), GetAmount(3, uPayments).ToString(ReportContext.CurrencyFormat));
                     report.AddRow(userInfo.UserName + Resources.Incomes, Resources.Total, "", uPayments.Sum(x => x.Amount).ToString(ReportContext.CurrencyFormat));
                 }

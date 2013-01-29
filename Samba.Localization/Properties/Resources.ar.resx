@@ -127,14 +127,14 @@
     <value>التقريب</value>
   </data>
   <data name="Rounding" xml:space="preserve">
-    <value>التقريب</value>
+    <value>خصم</value>
   </data>
   <data name="DontForgetEndingWorkPeriod" xml:space="preserve">
-    <value>لا تنسى أن تغلق فترة العمل!</value>
+    <value>لا تنسى أن تغلق  الوردية!</value>
   </data>
   <data name="WorkPeriodEndsMessage" xml:space="preserve">
-    <value>انتهاء فترة العمل.
-زيارة قسم تقارير وإنشاء تقارير فترة العمل </value>
+    <value>انتهاء الوردية.
+زيارة قسم تقارير وإنشاء تقاريرالوردية </value>
   </data>
   <data name="Selected_f" xml:space="preserve">
     <value>اختيار {0}</value>
@@ -164,7 +164,7 @@
     <value>طلب جديد</value>
   </data>
   <data name="Gift_ab" xml:space="preserve">
-    <value>[هدية]</value>
+    <value>[مجاملة]</value>
   </data>
   <data name="Width" xml:space="preserve">
     <value>عرض</value>
@@ -519,7 +519,7 @@
     <value>نطاق التاريخ ليست في فترة العمل بالموقع</value>
   </data>
   <data name="AccountsLiability" xml:space="preserve">
-    <value>ديون</value>
+    <value>عملاء</value>
   </data>
   <data name="AccountsReceivable" xml:space="preserve">
     <value>حسابات القبض</value>
@@ -546,7 +546,7 @@
     <value>مبيعات</value>
   </data>
   <data name="WorkPeriodReport" xml:space="preserve">
-    <value>تقرير عمل الفترة</value>
+    <value>تقرير الوردية</value>
   </data>
   <data name="Drawer" xml:space="preserve">
     <value>درج النقود</value>
@@ -681,7 +681,7 @@
     <value>البحث عن تذكرة</value>
   </data>
   <data name="FindProduct" xml:space="preserve">
-    <value>البحث عن المنتج</value>
+    <value>البحث عن صنف</value>
   </data>
   <data name="SelectTableThatYouWantToMoveTicket_f" xml:space="preserve">
     <value>حدد طاولةالجديد ل {0} التذاكر.</value>
@@ -759,7 +759,7 @@
     <value>لون الخلفية</value>
   </data>
   <data name="ChargedAmount" xml:space="preserve">
-    <value>متهم</value>
+    <value>المطلوب</value>
   </data>
   <data name="Portions" xml:space="preserve">
     <value>أجزاء</value>
@@ -780,7 +780,7 @@
     <value>Flat</value>
   </data>
   <data name="Round" xml:space="preserve">
-    <value>التقريب</value>
+    <value>خصم</value>
   </data>
   <data name="All" xml:space="preserve">
     <value>جميع</value>
@@ -905,7 +905,7 @@
     <value>خصومات إجمالي</value>
   </data>
   <data name="GiftsTotal" xml:space="preserve">
-    <value>إجمالي الهدايا</value>
+    <value>إجمالي المجاملات</value>
   </data>
   <data name="TicketCount" xml:space="preserve">
     <value>عدد التذاكر</value>
@@ -1124,7 +1124,7 @@
     <value>خدمة قوالب</value>
   </data>
   <data name="RoundingTotal" xml:space="preserve">
-    <value>التقريب إجمالي</value>
+    <value>إجمالي خصم</value>
   </data>
   <data name="AlwaysExcludeVat" xml:space="preserve">
     <value>استبعاد دائما TAX</value>
@@ -1307,7 +1307,7 @@
     <value>فراغات</value>
   </data>
   <data name="Gifts" xml:space="preserve">
-    <value>الهدايا</value>
+    <value>المجاملات</value>
   </data>
   <data name="SalesByItemGroup" xml:space="preserve">
     <value>المبيعات حسب مجموعة الأصناف</value>
@@ -1459,7 +1459,7 @@
     <value>هناك {0} تذاكر مفتوحة.</value>
   </data>
   <data name="StartingWorkPeriodCompleted" xml:space="preserve">
-    <value>بدأ فترة العمل.</value>
+    <value>بدأ  الوردية</value>
   </data>
   <data name="Department" xml:space="preserve">
     <value>قسم</value>
@@ -1540,7 +1540,7 @@
     <value>سطر</value>
   </data>
   <data name="DocumentNo" xml:space="preserve">
-    <value>الوثيقة رقم</value>
+    <value>الأستلامات رقم</value>
   </data>
   <data name="UnitPrice" xml:space="preserve">
     <value>سعر الوحدة</value>
@@ -1603,7 +1603,7 @@
     <value>القائمة خصائص</value>
   </data>
   <data name="Gift" xml:space="preserve">
-    <value>هدية</value>
+    <value>مجاملة</value>
   </data>
   <data name="Header" xml:space="preserve">
     <value>رأس</value>
@@ -1621,7 +1621,7 @@
     <value>لا يمكن حذف هذه القائمة بسبب تعيينه لإدارة</value>
   </data>
   <data name="CategoryProducts" xml:space="preserve">
-    <value>فئة المنتجات</value>
+    <value>فئة الأصناف</value>
   </data>
   <data name="Sort_f" xml:space="preserve">
     <value>نوع {0}</value>
@@ -1699,7 +1699,7 @@
     <value>تحديد تلقائي</value>
   </data>
   <data name="BatchPriceList" xml:space="preserve">
-    <value>قائمة الأسعار محرر</value>
+    <value>تعديل  قائمة الأسعار </value>
   </data>
   <data name="CanChangeDepartment" xml:space="preserve">
     <value>يمكن تغيير إدارة</value>
@@ -1708,16 +1708,16 @@
     <value>القيم زر أبجدية</value>
   </data>
   <data name="Inventory" xml:space="preserve">
-    <value>المخزون</value>
+    <value>المخازن</value>
   </data>
   <data name="Recipe" xml:space="preserve">
-    <value>وصفة</value>
+    <value>مكونات</value>
   </data>
   <data name="Quantity" xml:space="preserve">
     <value>العدد</value>
   </data>
   <data name="Transactions" xml:space="preserve">
-    <value>صفقة</value>
+    <value>الاستلامات</value>
   </data>
   <data name="EndOfDayRecords" xml:space="preserve">
     <value>نهاية اليوم من السجلات</value>
@@ -1880,10 +1880,10 @@
     <value>جزء</value>
   </data>
   <data name="RecipeName" xml:space="preserve">
-    <value>وصفة الاسم</value>
+    <value>الاسم</value>
   </data>
   <data name="Product" xml:space="preserve">
-    <value>نتاج</value>
+    <value>صنف</value>
   </data>
   <data name="FixedCost" xml:space="preserve">
     <value>التكلفة الثابتة</value>
@@ -1904,7 +1904,7 @@
     <value>شراء</value>
   </data>
   <data name="StartOfDay" xml:space="preserve">
-    <value>بداية الفترة العمل</value>
+    <value>بداية اليوم</value>
   </data>
   <data name="NewIncomeTransaction" xml:space="preserve">
     <value>جديدة الدخل المعاملات</value>
@@ -2132,10 +2132,10 @@
     <value>بدء العمل لتمكين الفترة POS</value>
   </data>
   <data name="StartWorkPeriod" xml:space="preserve">
-    <value>بدء العمل فترة</value>
+    <value>بدأ  الوردية</value>
   </data>
   <data name="EndWorkPeriod" xml:space="preserve">
-    <value>نهاية الفترة العمل</value>
+    <value>نهاية  الوردية</value>
   </data>
   <data name="TotalWorkTimeMinutes_f" xml:space="preserve">
     <value>مجموع ساعات العمل  {0:0}دقيقة</value>
@@ -2144,7 +2144,7 @@
     <value>مجموع ساعات العمل: {0:0} ساعات {1:0} دقيقة</value>
   </data>
   <data name="WorkPeriodStartDate_f" xml:space="preserve">
-    <value>تاريخ الفترة العمل: {0}</value>
+    <value>تاريخ الوردية: {0}</value>
   </data>
   <data name="WorkPeriodStartTime" xml:space="preserve">
     <value>وقت العمل الفترة: {0}</value>
@@ -2160,7 +2160,7 @@
     <value>الطابعة إعدادات</value>
   </data>
   <data name="GiftReasons" xml:space="preserve">
-    <value>هدية أسباب</value>
+    <value>أسباب مجاملة</value>
   </data>
   <data name="SambaPosWebsite" xml:space="preserve">
     <value>Vero</value>
@@ -2247,7 +2247,7 @@
     <value>لا يمكن حذف لأن هذا القالب طباعة تعيينه لمهمة الطباعة</value>
   </data>
   <data name="GiftReason" xml:space="preserve">
-    <value>هدية السبب</value>
+    <value>السبب مجاملة</value>
   </data>
   <data name="GiftReasonName" xml:space="preserve">
     <value>هدية السبب الاسم</value>
@@ -2868,10 +2868,10 @@
     <value>نسبة الخصم</value>
   </data>
   <data name="WorkPeriodStarted" xml:space="preserve">
-    <value>بدأت فترة العمل</value>
+    <value>بدأت الوردية</value>
   </data>
   <data name="WorkPeriodEnded" xml:space="preserve">
-    <value>أنتهت فترة العمل</value>
+    <value>أنتهت الوردية</value>
   </data>
   <data name="Decrease" xml:space="preserve">
     <value>تخفيض</value>

@@ -26,10 +26,10 @@ namespace Samba.Modules.MenuModule
         public ICategoryCommand ListDepartmentsCommand { get; set; }
         public ICategoryCommand ListMenuItemPropertyGroupsCommand { get; set; }
         public ICategoryCommand ListPricesCommand { get; set; }
-        public ICategoryCommand ListTicketTagGroupsCommand { get; set; }
-        public ICategoryCommand ListMenuItemPriceDefinitionsCommand { get; set; }
-        public ICategoryCommand ListVatTemplatesCommand { get; set; }
-        public ICategoryCommand ListTaxServiceTemplates { get; set; }
+        //public ICategoryCommand ListTicketTagGroupsCommand { get; set; }
+        //public ICategoryCommand ListMenuItemPriceDefinitionsCommand { get; set; }
+        //public ICategoryCommand ListVatTemplatesCommand { get; set; }
+        //public ICategoryCommand ListTaxServiceTemplates { get; set; }
 
         protected override void OnPostInitialization()
         {
@@ -38,10 +38,10 @@ namespace Samba.Modules.MenuModule
             CommonEventPublisher.PublishDashboardCommandEvent(ListScreenMenusCommand);
             CommonEventPublisher.PublishDashboardCommandEvent(ListMenuItemPropertyGroupsCommand);
             CommonEventPublisher.PublishDashboardCommandEvent(ListPricesCommand);
-            CommonEventPublisher.PublishDashboardCommandEvent(ListTicketTagGroupsCommand);
-            CommonEventPublisher.PublishDashboardCommandEvent(ListMenuItemPriceDefinitionsCommand);
-            CommonEventPublisher.PublishDashboardCommandEvent(ListVatTemplatesCommand);
-            CommonEventPublisher.PublishDashboardCommandEvent(ListTaxServiceTemplates);
+            //CommonEventPublisher.PublishDashboardCommandEvent(ListTicketTagGroupsCommand);
+            //CommonEventPublisher.PublishDashboardCommandEvent(ListMenuItemPriceDefinitionsCommand);
+            //CommonEventPublisher.PublishDashboardCommandEvent(ListVatTemplatesCommand);
+            //CommonEventPublisher.PublishDashboardCommandEvent(ListTaxServiceTemplates);
         }
 
         [ImportingConstructor]
@@ -52,10 +52,10 @@ namespace Samba.Modules.MenuModule
             ListScreenMenusCommand = new CategoryCommand<string>(Resources.MenuList, Resources.Products, OnListScreenMenus);
             ListMenuItemPropertyGroupsCommand = new CategoryCommand<string>(Resources.ModifierGroups, Resources.Products, OnListMenuItemPropertyGroupsCommand);
             ListPricesCommand = new CategoryCommand<string>(Resources.BatchPriceList, Resources.Products, OnListPrices);
-            ListTicketTagGroupsCommand = new CategoryCommand<string>(Resources.TicketTags, Resources.Settings, OnListTicketTags) { Order = 10 };
-            ListMenuItemPriceDefinitionsCommand = new CategoryCommand<string>(Resources.PriceDefinitions, Resources.Products, OnListMenuItemPriceDefinitions);
-            ListVatTemplatesCommand = new CategoryCommand<string>(Resources.VatTemplates, Resources.Products, OnListVatTemplates);
-            ListTaxServiceTemplates = new CategoryCommand<string>(Resources.TaxServiceTemplates, Resources.Products, OnListTaxServiceTemplates);
+           // ListTicketTagGroupsCommand = new CategoryCommand<string>(Resources.TicketTags, Resources.Settings, OnListTicketTags) { Order = 10 };
+           // ListMenuItemPriceDefinitionsCommand = new CategoryCommand<string>(Resources.PriceDefinitions, Resources.Products, OnListMenuItemPriceDefinitions);
+           // ListVatTemplatesCommand = new CategoryCommand<string>(Resources.VatTemplates, Resources.Products, OnListVatTemplates);
+           // ListTaxServiceTemplates = new CategoryCommand<string>(Resources.TaxServiceTemplates, Resources.Products, OnListTaxServiceTemplates);
 
             PermissionRegistry.RegisterPermission(PermissionNames.ChangeDepartment, PermissionCategories.Department, Resources.CanChangeDepartment);
             foreach (var department in AppServices.MainDataContext.Departments)

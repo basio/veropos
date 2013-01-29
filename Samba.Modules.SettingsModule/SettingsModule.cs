@@ -21,12 +21,12 @@ namespace Samba.Modules.SettingsModule
         public ICategoryCommand ListPrintersCommand { get; set; }
         public ICategoryCommand ListPrinterTemplatesCommand { get; set; }
         public ICategoryCommand ListNumeratorsCommand { get; set; }
-        public ICategoryCommand ListVoidReasonsCommand { get; set; }
+        //public ICategoryCommand ListVoidReasonsCommand { get; set; }
         public ICategoryCommand ListGiftReasonsCommand { get; set; }
         public ICategoryCommand ListMenuItemSettingsCommand { get; set; }
-        public ICategoryCommand ListRuleActionsCommand { get; set; }
-        public ICategoryCommand ListRulesCommand { get; set; }
-        public ICategoryCommand ListTriggersCommand { get; set; }
+      //  public ICategoryCommand ListRuleActionsCommand { get; set; }
+        //public ICategoryCommand ListRulesCommand { get; set; }
+       // public ICategoryCommand ListTriggersCommand { get; set; }
 
        // public ICategoryCommand ShowBrowser { get; set; }
 
@@ -64,12 +64,12 @@ namespace Samba.Modules.SettingsModule
             CommonEventPublisher.PublishDashboardCommandEvent(ListPrintJobsCommand);
             CommonEventPublisher.PublishDashboardCommandEvent(ListPrinterTemplatesCommand);
             CommonEventPublisher.PublishDashboardCommandEvent(ListNumeratorsCommand);
-            CommonEventPublisher.PublishDashboardCommandEvent(ListVoidReasonsCommand);
+          //  CommonEventPublisher.PublishDashboardCommandEvent(ListVoidReasonsCommand);
             CommonEventPublisher.PublishDashboardCommandEvent(ListGiftReasonsCommand);
             CommonEventPublisher.PublishDashboardCommandEvent(ListMenuItemSettingsCommand);
-            CommonEventPublisher.PublishDashboardCommandEvent(ListRuleActionsCommand);
-            CommonEventPublisher.PublishDashboardCommandEvent(ListRulesCommand);
-            CommonEventPublisher.PublishDashboardCommandEvent(ListTriggersCommand);
+            //CommonEventPublisher.PublishDashboardCommandEvent(ListRuleActionsCommand);
+            //CommonEventPublisher.PublishDashboardCommandEvent(ListRulesCommand);
+            //CommonEventPublisher.PublishDashboardCommandEvent(ListTriggersCommand);
 
             CommonEventPublisher.PublishNavigationCommandEvent(NavigateWorkPeriodsCommand);
         }
@@ -88,12 +88,12 @@ namespace Samba.Modules.SettingsModule
             ListPrintJobsCommand = new CategoryCommand<string>(Resources.PrintJobs, Resources.Settings, OnListPrintJobs);
             ListPrinterTemplatesCommand = new CategoryCommand<string>(Resources.PrinterTemplates, Resources.Settings, OnListPrinterTemplates);
             ListNumeratorsCommand = new CategoryCommand<string>(Resources.Numerators, Resources.Settings, OnListNumerators);
-            ListVoidReasonsCommand = new CategoryCommand<string>(Resources.VoidReasons, Resources.Products, OnListVoidReasons);
+           // ListVoidReasonsCommand = new CategoryCommand<string>(Resources.VoidReasons, Resources.Products, OnListVoidReasons);
             ListGiftReasonsCommand = new CategoryCommand<string>(Resources.GiftReasons, Resources.Products, OnListGiftReasons);
             ListMenuItemSettingsCommand = new CategoryCommand<string>(Resources.ProgramSettings, Resources.Settings, OnListMenuItemSettings) { Order = 10 };
-            ListRuleActionsCommand = new CategoryCommand<string>(Resources.RuleActions, Resources.Settings, OnListRuleActions);
-            ListRulesCommand = new CategoryCommand<string>(Resources.Rules, Resources.Settings, OnListRules);
-            ListTriggersCommand = new CategoryCommand<string>(Resources.Triggers, Resources.Settings, OnListTriggers);
+           // ListRuleActionsCommand = new CategoryCommand<string>(Resources.RuleActions, Resources.Settings, OnListRuleActions);
+           //ListRulesCommand = new CategoryCommand<string>(Resources.Rules, Resources.Settings, OnListRules);
+            //ListTriggersCommand = new CategoryCommand<string>(Resources.Triggers, Resources.Settings, OnListTriggers);
 
           //  ShowBrowser = new CategoryCommand<string>(Resources.SambaPosWebsite, Resources.SambaNetwork, OnShowBrowser) { Order = 99 };
 

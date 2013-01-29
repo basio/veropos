@@ -181,11 +181,13 @@ namespace Samba.Modules.BasicReports
                               new CashReportViewModel(),
                               new LiabilityReportViewModel(),
                               new ReceivableReportViewModel(),
-                              new InternalAccountsViewModel(),
+                              //new InternalAccountsViewModel(),
                               new PurchaseReportViewModel(),
                               new InventoryReportViewModel(),
                               new CostReportViewModel(),
-                              new CsvBuilderViewModel()
+                              new SLiabilityReportViewModel(),
+                              new SReceivableReportViewModel(),
+                              // new CsvBuilderViewModel()
                           };
         }
 

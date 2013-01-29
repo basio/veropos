@@ -219,7 +219,7 @@
                             <RowDefinition Height="auto" />
                             <RowDefinition Height="auto" />
                         </Grid.RowDefinitions>
-                        <TextBlock FontWeight="Bold" Grid.Row="0" Grid.Column="0" Text="{LocText AccountName,Suffix=':'}" Foreground="Gold">
+                        <TextBlock FontWeight="Bold" Grid.Row="0" Grid.Column="0" Text="{LocText AccountName,Suffix=':'}" >
                         </TextBlock>
                         <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding SelectedCustomer.Name}" />
                         <TextBlock FontWeight="Bold" Grid.Row="0" Grid.Column="2" Text="{LocText PhoneNumber,Suffix=':'}">
@@ -249,7 +249,7 @@
                             <RowDefinition Height="auto" />
                             <RowDefinition Height="auto" />
                         </Grid.RowDefinitions>
-                        <TextBlock FontWeight="Bold" Grid.Row="0" Grid.Column="0" Text="{LocText SupplierName,Suffix=':'}" Foreground="Gold">
+                        <TextBlock FontWeight="Bold" Grid.Row="0" Grid.Column="0" Text="{LocText SupplierName,Suffix=':'}">
                         </TextBlock>
                         <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding SelectedSupplier.Name}" />
                         <TextBlock FontWeight="Bold" Grid.Row="0" Grid.Column="2" Text="{LocText PhoneNumber,Suffix=':'}">

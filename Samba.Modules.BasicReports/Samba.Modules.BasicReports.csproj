@@ -74,9 +74,13 @@
     <Compile Include="BasicReportViewModel.cs" />
     <Compile Include="Reports\AccountReport\AccountData.cs" />
     <Compile Include="Reports\AccountReport\AccountReportViewModelBase.cs" />
+    <Compile Include="Reports\AccountReport\SLiabilityReportViewModel.cs" />
+    <Compile Include="Reports\AccountReport\SReceivableReportViewModel.cs" />
     <Compile Include="Reports\AccountReport\InternalAccountsViewModel.cs" />
     <Compile Include="Reports\AccountReport\LiabilityReportViewModel.cs" />
     <Compile Include="Reports\AccountReport\ReceivableReportViewModel.cs" />
+    <Compile Include="Reports\AccountReport\SupplierData.cs" />
+    <Compile Include="Reports\AccountReport\SupplierReportViewModel.cs" />
     <Compile Include="Reports\AmountCalculator.cs" />
     <Compile Include="Reports\CashReport\CashReportViewModel.cs" />
     <Compile Include="Reports\CSVBuilder\CsvBuilderViewModel.cs" />

@@ -388,17 +388,17 @@
                         <TextBlock FontSize="16" FontWeight="Bold" TextAlignment="Center" TextWrapping="Wrap"
                              Text="{Binding ShowGiftReasonsCommand.Caption}" />
                     </FxButton:FlexButton>
-                    <FxButton:FlexButton Height="50" Margin="0,0,3,3" Command="{Binding ShowVoidReasonsCommand}"
+                    <!--<FxButton:FlexButton Height="50" Margin="0,0,3,3" Command="{Binding ShowVoidReasonsCommand}"
                          Visibility="{Binding IsItemsSelected,Converter={StaticResource VisibilityConverter}}">
                         <TextBlock FontSize="16" FontWeight="Bold" TextAlignment="Center" TextWrapping="Wrap"
                              Text="{Binding ShowVoidReasonsCommand.Caption}" />
-                    </FxButton:FlexButton>
+                    </FxButton:FlexButton>-->
                     <FxButton:FlexButton Height="50" Margin="0,0,3,3" Command="{Binding CancelItemCommand}"
                          Visibility="{Binding IsItemsSelected,Converter={StaticResource VisibilityConverter}}">
                         <TextBlock FontSize="16" FontWeight="Bold" TextAlignment="Center" TextWrapping="Wrap"
                              Text="{Binding CancelItemCommand.Caption}" />
                     </FxButton:FlexButton>
-                    <FxButton:FlexButton Height="50" Margin="0,0,3,3" Command="{Binding MoveTicketItemsCommand}"
+                    <!--<FxButton:FlexButton Height="50" Margin="0,0,3,3" Command="{Binding MoveTicketItemsCommand}"
                          Visibility="{Binding IsItemsSelected,Converter={StaticResource VisibilityConverter}}">
                         <TextBlock FontSize="16" FontWeight="Bold" TextAlignment="Center" TextWrapping="Wrap"
                              Text="{Binding MoveTicketItemsCommand.Caption}" />
@@ -412,7 +412,7 @@
                          Visibility="{Binding IsItemsSelected,Converter={StaticResource VisibilityConverter}}">
                         <TextBlock FontSize="16" FontWeight="Bold" TextAlignment="Center" TextWrapping="Wrap"
                              Text="{Binding ChangePriceCommand.Caption}" />
-                    </FxButton:FlexButton>
+                    </FxButton:FlexButton>-->
                     <FxButton:FlexButton ButtonColor="Red" Width="80" Height="60" Margin="0,0,0,3"
                          Command="{Binding CloseTicketCommand}" Content="{Binding CloseTicketCommand.Caption}"
                          Visibility="Visible" />

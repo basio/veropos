@@ -26,7 +26,7 @@ namespace Samba.Modules.SupplierModule
         {
             _regionManager = regionManager;
             _SupplierSelectorView = SupplierSelectorView;
-            ListSuppliersCommand = new CategoryCommand<string>(Resources.SupplierList, Resources.Suppliers, OnSupplierListExecute) { Order = 40 };
+            ListSuppliersCommand = new CategoryCommand<string>(Resources.SupplierList, Resources.Products, OnSupplierListExecute) { Order = 40 };
             PermissionRegistry.RegisterPermission(PermissionNames.MakeAccountTransaction, PermissionCategories.Cash, Resources.CanMakeAccountTransaction);
             PermissionRegistry.RegisterPermission(PermissionNames.CreditOrDeptAccount, PermissionCategories.Cash, Resources.CanMakeCreditOrDeptTransaction);
         }

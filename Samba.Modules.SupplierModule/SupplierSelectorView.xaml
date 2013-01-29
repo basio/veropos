@@ -44,7 +44,7 @@
                             <RowDefinition Height="Auto" />
                         </Grid.RowDefinitions>
                         <TextBlock Margin="3" Grid.Row="0" Grid.Column="0" FontSize="24" Text="{LocText PhoneNumber}" />
-                        <TextBlock Margin="3" Grid.Row="0" Grid.Column="1" FontSize="24" Text="{LocText SupplierName}" Foreground="Brown" />
+                        <TextBlock Margin="3" Grid.Row="0" Grid.Column="1" FontSize="24" Text="{LocText SupplierName}"  />
                         <TextBlock Margin="3" Grid.Row="0" Grid.Column="2" FontSize="24" Text="{LocText Address}" />
                        
                         <Common:FilteredTextBox Margin="3" Grid.Row="1" Grid.Column="0" FontSize="24" Name="PhoneNumber"
@@ -181,7 +181,7 @@
                 <VirtualKeyboard:KeyboardView>
                 </VirtualKeyboard:KeyboardView>
             </Viewbox>-->
-            <Grid Grid.Column="1" Grid.RowSpan="2" Background="yellow">
+            <Grid Grid.Column="1" Grid.RowSpan="2" >
                 <Grid.RowDefinitions>
                     <RowDefinition Height="auto" />
                     <RowDefinition Height="*" />
@@ -228,7 +228,7 @@
                     <RowDefinition Height="auto" />
                     <RowDefinition Height="auto" />
                 </Grid.RowDefinitions>
-                <TextBlock FontWeight="Bold" Margin="5" Grid.Row="0" Grid.Column="0" Text="{LocText SupplierName}" Foreground="Blue">
+                <TextBlock FontWeight="Bold" Margin="5" Grid.Row="0" Grid.Column="0" Text="{LocText SupplierName}" >
                 </TextBlock>
                 <TextBlock Margin="5" Grid.Row="0" Grid.Column="1" Text="{Binding SelectedSupplier.Name}" />
                 <TextBlock FontWeight="Bold" Margin="5" Grid.Row="0" Grid.Column="2" Text="{LocText PhoneNumber}">
@@ -306,7 +306,7 @@
                     </GridView>
                 </ListView.View>
             </ListView>
-            <Grid Grid.Column="1" Grid.RowSpan="2" Background="green">
+            <Grid Grid.Column="1" Grid.RowSpan="2" >
                 <Grid.RowDefinitions>
                     <RowDefinition Height="auto" />
                     <RowDefinition Height="*" />
