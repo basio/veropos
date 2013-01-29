@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CommandButtonViewModel.cs" />
+    <Compile Include="SupplierViewModel.cs" />
     <Compile Include="CustomerViewModel.cs" />
     <Compile Include="DiscountViewModel.cs" />
     <Compile Include="GenericRuleRegistator.cs" />
@@ -116,7 +117,7 @@
   <PropertyGroup>
     <PostBuildEvent>IF NOT "$(ConfigurationName)"=="Release" GOTO End
 
-copy "$(TargetDir)$(TargetFileName)" "$(SolutionDir)SambaSetup\src"
+copy "$(TargetDir)$(TargetFileName)" "$(SolutionDir)VeroSetup\src"
 
 :End</PostBuildEvent>
   </PropertyGroup>

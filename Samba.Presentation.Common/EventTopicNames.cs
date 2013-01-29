@@ -31,6 +31,9 @@ namespace Samba.Presentation.Common
         public const string FocusTicketScreen = "FocusTicketScreen";
         public const string AddLiabilityAmount = "Add Liability Amount";
         public const string AddReceivableAmount = "Add Receivable Amount";
+        public const string AddLiabilityAmountForSupplier = "Add Liability Amount For Supplier";
+        public const string AddReceivableAmountForSupplier = "Add Receivable Amount For Supplier";
+        
         public const string LocationSelectedForTicket = "LocationSelectedForTicket";
         public const string ExecuteEvent = "ExecuteEvent";
         public const string UpdateDepartment = "Update Department";
@@ -76,5 +79,12 @@ namespace Samba.Presentation.Common
         public const string PaymentRequestedForTicket = "Payment Requested For Ticket";
         public const string GetPaymentFromCustomer = "Get Payment From Customer";
         public const string MakePaymentToCustomer = "Make Payment To Customer";
+        //
+        public const string SelectSupplier = "Select Supplier";
+        public const string ActivateSupplierAccount = "Activate Supplier Account";
+        public const string ActivateSupplierView = "Activate Supplier View";
+        public const string GetPaymentFromSupplier = "Get Payment From Supplier";
+        public const string MakePaymentToSupplier = "Make Payment To Supplier";
+        
     }
 }

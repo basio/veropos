@@ -8,12 +8,12 @@
                 <LocText ResourceIdentifierKey="InventoryItemName" Suffix=":"/>
             </Label>
             <TextBox HorizontalAlignment="Left" MinWidth="200" Text="{Binding Name,Mode=TwoWay}" />
-            <Label>
+           <!-- <Label>
                 <LocText ResourceIdentifierKey="GroupCode" Suffix=":"/>
-            </Label>
-            <ComboBox HorizontalAlignment="Left" MinWidth="150" Text="{Binding GroupCode,Mode=TwoWay}"
+            </Label>-->
+           <!-- <ComboBox HorizontalAlignment="Left" MinWidth="150" Text="{Binding GroupCode,Mode=TwoWay}"
                  ItemsSource="{Binding GroupCodes}" IsEditable="True">
-            </ComboBox>
+            </ComboBox>-->
             <Label>
                 <LocText ResourceIdentifierKey="BaseUnit" Suffix=":"/>
             </Label>

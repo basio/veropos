@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samba.Modules.SupplierModule", "Samba.Modules.SupplierModule.csproj", "{EDEF0022-075C-4DEC-853F-6558F9E8438A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		de|Any CPU = de|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EDEF0022-075C-4DEC-853F-6558F9E8438A}.de|Any CPU.ActiveCfg = de|Any CPU
+		{EDEF0022-075C-4DEC-853F-6558F9E8438A}.de|Any CPU.Build.0 = de|Any CPU
+		{EDEF0022-075C-4DEC-853F-6558F9E8438A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDEF0022-075C-4DEC-853F-6558F9E8438A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDEF0022-075C-4DEC-853F-6558F9E8438A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDEF0022-075C-4DEC-853F-6558F9E8438A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

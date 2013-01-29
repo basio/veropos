@@ -73,11 +73,7 @@
                         </StackPanel>
                     </Grid>
                 </StackPanel>
-                <Viewbox Grid.Row="1">
-                    <VirtualKeyboard:KeyboardView>
-                    </VirtualKeyboard:KeyboardView>
-                </Viewbox>
-            </Grid>
+                            </Grid>
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*" />

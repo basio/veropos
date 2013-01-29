@@ -50,24 +50,24 @@ namespace Samba.Services
             return new[] { cashAmount, creditCardAmount, ticketAmount };
         }
 
-        public void AddIncome(int customerId, decimal amount, string description, PaymentType paymentType)
+        public void AddIncome(int customerId, decimal amount, string description, PaymentType paymentType,bool isCusomter=true)
         {
-            AddTransaction(customerId, amount, description, paymentType, TransactionType.Income);
+            AddTransaction(customerId, amount, description, paymentType, TransactionType.Income,isCusomter);
         }
 
-        public void AddExpense(int customerId, decimal amount, string description, PaymentType paymentType)
+        public void AddExpense(int customerId, decimal amount, string description, PaymentType paymentType,bool isCusomter=true)
         {
-            AddTransaction(customerId, amount, description, paymentType, TransactionType.Expense);
+            AddTransaction(customerId, amount, description, paymentType, TransactionType.Expense, isCusomter);
         }
 
-        public void AddLiability(int customerId, decimal amount, string description)
+        public void AddLiability(int customerId, decimal amount, string description,bool isCusomter=true)
         {
-            AddTransaction(customerId, amount, description, 0, TransactionType.Liability);
+            AddTransaction(customerId, amount, description, 0, TransactionType.Liability, isCusomter);
         }
 
-        public void AddReceivable(int customerId, decimal amount, string description)
+        public void AddReceivable(int customerId, decimal amount, string description,bool isCusomter=true)
         {
-            AddTransaction(customerId, amount, description, 0, TransactionType.Receivable);
+            AddTransaction(customerId, amount, description, 0, TransactionType.Receivable, isCusomter);
         }
 
         public IEnumerable<CashTransaction> GetTransactions(WorkPeriod workPeriod)
@@ -102,8 +102,18 @@ namespace Samba.Services
             }
         }
 
-        private static void AddTransaction(int customerId, decimal amount, string description, PaymentType paymentType, TransactionType transactionType)
+        private static void AddTransaction(int customerId, decimal amount, string description, PaymentType paymentType, TransactionType transactionType, bool isCustomer)
         {
+            int suppId = -1;
+            int custId = -1;
+            if (isCustomer)
+            {
+                custId = customerId;
+            }
+            else
+            {
+                suppId = customerId;
+            }
             using (var workspace = WorkspaceFactory.Create())
             {
                 if (transactionType == TransactionType.Income || transactionType == TransactionType.Expense)
@@ -116,7 +126,8 @@ namespace Samba.Services
                         PaymentType = (int)paymentType,
                         TransactionType = (int)transactionType,
                         UserId = AppServices.CurrentLoggedInUser.Id,
-                        CustomerId = customerId
+                        CustomerId = custId,
+                        SupplierId = suppId
                     };
                     workspace.Add(c);
                 }
@@ -129,7 +140,8 @@ namespace Samba.Services
                         Name = description,
                         TransactionType = (int)transactionType,
                         UserId = AppServices.CurrentLoggedInUser.Id,
-                        CustomerId = customerId
+                        CustomerId = custId,
+                        SupplierId = suppId
                     };
                     workspace.Add(c);
                 }
@@ -148,10 +160,23 @@ namespace Samba.Services
                 return p.GetValueOrDefault(0) + a.GetValueOrDefault(0) + t.GetValueOrDefault(0);
             }
 
-            //var paymentSum = Dao.Query<Ticket>(x => x.CustomerId == accountId, x => x.Payments).Sum(x => x.Payments.Where(y => y.PaymentType == 3).Sum(y => y.Amount));
-            //var transactionSum = Dao.Query<CashTransaction>().Where(x => x.CustomerId == accountId).Sum(x => x.TransactionType == 1 ? x.Amount : 0 - x.Amount);
-            //var accountTransactionSum = Dao.Query<AccountTransaction>().Where(x => x.CustomerId == accountId).Sum(x => x.TransactionType == 3 ? x.Amount : 0 - x.Amount);
-            //return paymentSum + transactionSum + accountTransactionSum;
+            var paymentSum = Dao.Query<Ticket>(x => x.CustomerId == accountId, x => x.Payments).Sum(x => x.Payments.Where(y => y.PaymentType == 3).Sum(y => y.Amount));
+            var transactionSum = Dao.Query<CashTransaction>().Where(x => x.CustomerId == accountId).Sum(x => x.TransactionType == 1 ? x.Amount : 0 - x.Amount);
+            var accountTransactionSum = Dao.Query<AccountTransaction>().Where(x => x.CustomerId == accountId).Sum(x => x.TransactionType == 3 ? x.Amount : 0 - x.Amount);
+            return paymentSum + transactionSum + accountTransactionSum;
+        }
+        public static decimal GetAccountBalanceForSupplier(int accountId)
+        {
+            using (var w = WorkspaceFactory.CreateReadOnly())
+            {
+                var a = w.Queryable<AccountTransaction>().Where(x => x.SupplierId == accountId).Sum(x => (decimal?)(x.TransactionType == 3 ? x.Amount : 0 - x.Amount));
+                var t = w.Queryable<CashTransaction>().Where(x => x.SupplierId == accountId).Sum(x => (decimal?)(x.TransactionType == 1 ? x.Amount : 0 - x.Amount));
+                return a.GetValueOrDefault(0) + t.GetValueOrDefault(0);
+            }
+
+            var transactionSum = Dao.Query<CashTransaction>().Where(x => x.SupplierId == accountId).Sum(x => x.TransactionType == 1 ? x.Amount : 0 - x.Amount);
+            var accountTransactionSum = Dao.Query<AccountTransaction>().Where(x => x.SupplierId == accountId).Sum(x => x.TransactionType == 3 ? x.Amount : 0 - x.Amount);
+            return transactionSum + accountTransactionSum;
         }
     }
 }

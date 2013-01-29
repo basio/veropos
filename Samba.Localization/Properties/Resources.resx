@@ -112,10 +112,10 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Paid" xml:space="preserve">
     <value>Paid</value>
@@ -3290,5 +3290,30 @@ Error Message:
   </data>
   <data name="DeleteErrorProductUsedInPrinterMap" xml:space="preserve">
     <value>Can't delete because this product assigned to a Printer Map</value>
+  </data>
+  <data name="SupplierList" xml:space="preserve">
+    <value>Suppliers list</value>
+  </data>
+  <data name="Suppliers" xml:space="preserve">
+    <value>Supplier</value>
+  </data>
+  <data name="NewSupplier_r" xml:space="preserve">
+    <value>New Supplier</value>
+  </data>
+  <data name="SelectSupplier_r" xml:space="preserve">
+    <value>Select supplier</value>
+  </data>
+  <data name="Supplier" xml:space="preserve">
+    <value>Supplier</value>
+  </data>
+  <data name="SupplierAccount_r" xml:space="preserve">
+    <value>Supplier   
+    Account</value>
+  </data>
+  <data name="SupplierAccounts" xml:space="preserve">
+    <value>Supplier Account</value>
+  </data>
+  <data name="SupplierName" xml:space="preserve">
+    <value>Supplier Name</value>
   </data>
 </root>

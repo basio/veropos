@@ -33,6 +33,7 @@ namespace Samba.Presentation
                 AggregateCatalog.Catalogs.Add(new DirectoryCatalog(path, "Samba.Modules*"));
                 AggregateCatalog.Catalogs.Add(new DirectoryCatalog(path, "Samba.Presentation*"));
                 AggregateCatalog.Catalogs.Add(new DirectoryCatalog(path, "Samba.Services.dll"));
+               // AggregateCatalog.Catalogs.Add(new DirectoryCatalog(path, "Samba.Modules.SupplierModule.dll"));
             }
             LocalSettings.AppPath = path;
         }

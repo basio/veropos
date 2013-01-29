@@ -8,6 +8,7 @@ using Samba.Domain.Models.Settings;
 using Samba.Domain.Models.Tickets;
 using Samba.Domain.Models.Transactions;
 using Samba.Domain.Models.Users;
+using Samba.Domain.Models.Suppliers;
 using Samba.Infrastructure.Data.SQL;
 
 namespace Samba.Persistance.Data
@@ -47,6 +48,7 @@ namespace Samba.Persistance.Data
         public DbSet<WorkPeriod> WorkPeriods { get; set; }
         public DbSet<PaidItem> PaidItems { get; set; }
         public DbSet<Customer> Customers { get; set; }
+        public DbSet<Supplier> Suppliers { get; set; }
         public DbSet<Permission> Permissions { get; set; }
         public DbSet<CashTransaction> CashTransactions { get; set; }
         public DbSet<AccountTransaction> AccountTransactions { get; set; }

@@ -369,19 +369,19 @@
   <PropertyGroup>
     <PostBuildEvent>IF NOT "$(ConfigurationName)"=="Release" GOTO End
 
-copy "$(TargetDir)$(TargetFileName)" "$(SolutionDir)SambaSetup\src"
-copy "$(TargetDir)Microsoft.Practices.Prism.dll" "$(SolutionDir)SambaSetup\src"
-copy "$(TargetDir)Microsoft.Practices.EnterpriseLibrary.Common.dll" "$(SolutionDir)SambaSetup\src"
-copy "$(TargetDir)Microsoft.Practices.EnterpriseLibrary.Validation.dll" "$(SolutionDir)SambaSetup\src"
-copy "$(TargetDir)Microsoft.Practices.ServiceLocation.dll" "$(SolutionDir)SambaSetup\src"
-copy "$(TargetDir)Microsoft.Practices.Unity.dll" "$(SolutionDir)SambaSetup\src"
-copy "$(TargetDir)Microsoft.Practices.Unity.Interception.dll" "$(SolutionDir)SambaSetup\src"
-copy "$(TargetDir)FlexButton.dll" "$(SolutionDir)SambaSetup\src"
-copy "$(TargetDir)PropertyTools.Wpf.dll" "$(SolutionDir)SambaSetup\src"
-copy "$(TargetDir)UIControls.dll" "$(SolutionDir)SambaSetup\src"
-copy "$(TargetDir)GongSolutions.Wpf.DragDrop.dll" "$(SolutionDir)SambaSetup\src"
-copy "$(TargetDir)DataGridFilterLibrary.dll" "$(SolutionDir)SambaSetup\src"
-copy "$(TargetDir)System.Windows.Interactivity.dll" "$(SolutionDir)SambaSetup\src"
+copy "$(TargetDir)$(TargetFileName)" "$(SolutionDir)VeroSetup\src"
+copy "$(TargetDir)Microsoft.Practices.Prism.dll" "$(SolutionDir)VeroSetup\src"
+copy "$(TargetDir)Microsoft.Practices.EnterpriseLibrary.Common.dll" "$(SolutionDir)VeroSetup\src"
+copy "$(TargetDir)Microsoft.Practices.EnterpriseLibrary.Validation.dll" "$(SolutionDir)VeroSetup\src"
+copy "$(TargetDir)Microsoft.Practices.ServiceLocation.dll" "$(SolutionDir)VeroSetup\src"
+copy "$(TargetDir)Microsoft.Practices.Unity.dll" "$(SolutionDir)VeroSetup\src"
+copy "$(TargetDir)Microsoft.Practices.Unity.Interception.dll" "$(SolutionDir)VeroSetup\src"
+copy "$(TargetDir)FlexButton.dll" "$(SolutionDir)VeroSetup\src"
+copy "$(TargetDir)PropertyTools.Wpf.dll" "$(SolutionDir)VeroSetup\src"
+copy "$(TargetDir)UIControls.dll" "$(SolutionDir)VeroSetup\src"
+copy "$(TargetDir)GongSolutions.Wpf.DragDrop.dll" "$(SolutionDir)VeroSetup\src"
+copy "$(TargetDir)DataGridFilterLibrary.dll" "$(SolutionDir)VeroSetup\src"
+copy "$(TargetDir)System.Windows.Interactivity.dll" "$(SolutionDir)VeroSetup\src"
 
 :End</PostBuildEvent>
   </PropertyGroup>

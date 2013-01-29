@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Samba.Infrastructure.Data;
+using Samba.Domain.Models.Suppliers;
 
 namespace Samba.Domain.Models.Inventory
 {
@@ -11,6 +12,8 @@ namespace Samba.Domain.Models.Inventory
         public int Id { get; set; }
         public string Name { get; set; }
         public DateTime Date { get; set; }
+        public virtual Supplier supplier { get; set; }
+        
         public virtual IList<TransactionItem> TransactionItems { get; set; }
 
         public Transaction()

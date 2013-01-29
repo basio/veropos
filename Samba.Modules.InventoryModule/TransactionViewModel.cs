@@ -2,16 +2,38 @@
 using System.Collections.ObjectModel;
 using System.Linq;
 using Samba.Domain.Models.Inventory;
+using Samba.Domain.Models.Suppliers;
 using Samba.Infrastructure.Data;
 using Samba.Localization.Properties;
 using Samba.Presentation.Common;
 using Samba.Presentation.Common.ModelBase;
 using Samba.Services;
+using System.Collections.Generic;
+using Samba.Domain.Models.Inventory;
+using Samba.Persistance.Data;
+
 
 namespace Samba.Modules.InventoryModule
 {
     class TransactionViewModel : EntityViewModelBase<Transaction>
     {
+
+        private IEnumerable<string> _suppliersName;
+        public IEnumerable<string> SuppliersName { get { return _suppliersName ?? (_suppliersName = Dao.Distinct<Supplier>(x =>x.Name)); } }
+        public string SupplierName
+        {
+            get
+            {
+                return Model.supplier != null ? Model.supplier.Name : string.Format("- {0} -", Localization.Properties.Resources.Select);
+            }
+            set
+            {
+                var i = _workspace.Single<Supplier>(x => x.Name.ToLower() == value.ToLower());
+                Model.supplier = i;
+                RaisePropertyChanged("SupplierName");
+                            }
+        }
+
         private IWorkspace _workspace;
         public TransactionViewModel(Transaction model)
             : base(model)

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Text.RegularExpressions;
 using Samba.Domain.Models.Inventory;
+using Samba.Domain.Models.Suppliers;
 using Samba.Domain.Models.Menus;
 using Samba.Domain.Models.Tickets;
 using Samba.Persistance.Data;
@@ -68,6 +69,10 @@ namespace Samba.Services
         public IEnumerable<string> GetInventoryItemNames()
         {
             return Dao.Select<InventoryItem, string>(x => x.Name, x => !string.IsNullOrEmpty(x.Name));
+        }
+        public IEnumerable<string> GetSupplierNames()
+        {
+            return Dao.Select<Supplier, string>(x => x.Name, x => !string.IsNullOrEmpty(x.Name));
         }
                 
         public MenuItemPropertyGroup GetUnselectedItem(TicketItem ticketItem)

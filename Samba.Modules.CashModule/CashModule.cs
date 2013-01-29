@@ -2,6 +2,7 @@
 using Microsoft.Practices.Prism.MefExtensions.Modularity;
 using Microsoft.Practices.Prism.Regions;
 using Samba.Domain.Models.Customers;
+using Samba.Domain.Models.Suppliers;
 using Samba.Localization.Properties;
 using Samba.Presentation.Common;
 using Samba.Services;
@@ -66,6 +67,7 @@ namespace Samba.Modules.CashModule
                         ActivateModuleScreen();
                         ((CashViewModel)_cashView.DataContext).GetPaymentFromCustomer(x.Value);
                     }
+                   
 
                     if (x.Topic == EventTopicNames.AddLiabilityAmount)
                     {
@@ -77,6 +79,33 @@ namespace Samba.Modules.CashModule
                     {
                         ActivateModuleScreen();
                         ((CashViewModel)_cashView.DataContext).AddReceivableAmount(x.Value);
+                    }
+                });
+            EventServiceFactory.EventService.GetEvent<GenericEvent<Supplier>>().Subscribe(
+                x =>
+                {
+                    if (x.Topic == EventTopicNames.AddLiabilityAmountForSupplier)
+                    {
+                        ActivateModuleScreen();
+                        ((CashViewModel)_cashView.DataContext).AddLiabilityAmountForSupplier(x.Value);
+                    }
+
+                    if (x.Topic == EventTopicNames.AddReceivableAmountForSupplier)
+                    {
+                        ActivateModuleScreen();
+                        ((CashViewModel)_cashView.DataContext).AddReceivableAmountForSupplier(x.Value);
+                    }
+
+                    if (x.Topic == EventTopicNames.MakePaymentToSupplier)
+                    {
+                        ActivateModuleScreen();
+                        ((CashViewModel)_cashView.DataContext).MakePaymentToSupplier(x.Value);
+                    }
+
+                    if (x.Topic == EventTopicNames.GetPaymentFromSupplier)
+                    {
+                        ActivateModuleScreen();
+                        ((CashViewModel)_cashView.DataContext).GetPaymentFromSupplier(x.Value);
                     }
                 });
         }

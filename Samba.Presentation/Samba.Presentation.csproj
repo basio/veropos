@@ -248,6 +248,10 @@
       <Project>{9497C48E-B9B5-4869-820E-09ECE4347632}</Project>
       <Name>Samba.Modules.NavigationModule</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Samba.Modules.SupplierModule\Samba.Modules.SupplierModule.csproj">
+      <Project>{552fd34c-8973-43ae-bdae-20463be49f5a}</Project>
+      <Name>Samba.Modules.SupplierModule</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Samba.Modules.UserModule\Samba.Modules.UserModule.csproj">
       <Project>{1AE61C89-EBFD-498D-9F53-6319B302CDBF}</Project>
       <Name>Samba.Modules.UserModule</Name>

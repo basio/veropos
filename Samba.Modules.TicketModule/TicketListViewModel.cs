@@ -781,7 +781,7 @@ namespace Samba.Modules.TicketModule
         {
             SelectedDepartment.PublishEvent(EventTopicNames.SelectCustomer);
         }
-
+       
         private bool CanSelectCustomer(string arg)
         {
             return (SelectedTicket == null ||

@@ -16,8 +16,15 @@
             </Label>
             <TextBox HorizontalAlignment="Left" MinWidth="200" Text="{Binding Name,Mode=TwoWay}" />
             <Label>
+                <LocText ResourceIdentifierKey="SupplierName" Suffix=":"/>
+            </Label>
+            <ComboBox HorizontalAlignment="Left" MinWidth="150" Text="{Binding SupplierName,Mode=TwoWay}"
+                 ItemsSource="{Binding SuppliersName}" IsEditable="True">
+            </ComboBox>
+            <Label>
                 <LocText ResourceIdentifierKey="InventoryItems" Suffix=":" />
             </Label>
+            
         </StackPanel>
         <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Left">
             <DataGrid ItemsSource="{Binding TransactionItems}" SelectedItem="{Binding SelectedTransactionItem, Mode=TwoWay}"

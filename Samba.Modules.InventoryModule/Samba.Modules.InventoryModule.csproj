@@ -140,7 +140,7 @@
   <PropertyGroup>
     <PostBuildEvent>IF NOT "$(ConfigurationName)"=="Release" GOTO End
 
-copy "$(TargetDir)$(TargetFileName)" "$(SolutionDir)SambaSetup\src"
+copy "$(TargetDir)$(TargetFileName)" "$(SolutionDir)VeroSetup\src"
 
 :End</PostBuildEvent>
   </PropertyGroup>

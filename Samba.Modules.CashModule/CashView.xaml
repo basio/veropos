@@ -190,7 +190,9 @@
                     <FlexButton:FlexButton Margin="2" Height="60" Command="{Binding ActivateExpenseTransactionRecordCommand }"
                          Content="{Binding ActivateExpenseTransactionRecordCommand.Caption}" />
                     <FlexButton:FlexButton Margin="2" Height="60" Command="{Binding DisplayCustomerAccountsCommand }"
-                         Content="{Binding DisplayCustomerAccountsCommand.Caption}" />
+                         Content="{Binding DisplayCustomerAccountsCommand.Caption}"  />
+                    <FlexButton:FlexButton Margin="2" Height="60" Command="{Binding DisplaySupplierAccountsCommand }"
+                         Content="{Binding DisplaySupplierAccountsCommand.Caption}" />
                 </StackPanel>
             </Grid>
             <Grid>
@@ -199,7 +201,7 @@
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
                 <StackPanel Margin="10">
-                    <TextBlock Foreground="Gray" FontWeight="Bold" Text="{Binding TransactionDescription}" />
+                    <TextBlock Foreground="Gray" Background="Snow" FontWeight="Bold" Text="{Binding TransactionDescription}" />
                     <Grid Visibility="{Binding IsCustomerDetailsVisible,Converter={StaticResource VisibilityConverter}}">
                         <Grid.Resources>
                             <Style TargetType="TextBlock">
@@ -217,7 +219,7 @@
                             <RowDefinition Height="auto" />
                             <RowDefinition Height="auto" />
                         </Grid.RowDefinitions>
-                        <TextBlock FontWeight="Bold" Grid.Row="0" Grid.Column="0" Text="{LocText AccountName,Suffix=':'}">
+                        <TextBlock FontWeight="Bold" Grid.Row="0" Grid.Column="0" Text="{LocText AccountName,Suffix=':'}" Foreground="Gold">
                         </TextBlock>
                         <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding SelectedCustomer.Name}" />
                         <TextBlock FontWeight="Bold" Grid.Row="0" Grid.Column="2" Text="{LocText PhoneNumber,Suffix=':'}">
@@ -230,6 +232,37 @@
                         </TextBlock>
                         <TextBlock Grid.Row="1" Grid.Column="3" Text="{Binding SelectedCustomer.Note}" />
                     </Grid>
+                    <Grid Visibility="{Binding IsSupplierDetailsVisible,Converter={StaticResource VisibilityConverter}}">
+                        <Grid.Resources>
+                            <Style TargetType="TextBlock">
+                                <Setter Property="Margin" Value="0,5,5,5" />
+                            </Style>
+                        </Grid.Resources>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto" />
+                            <ColumnDefinition Width="auto" />
+                            <ColumnDefinition Width="auto" />
+                            <ColumnDefinition Width="auto" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto" />
+                            <RowDefinition Height="auto" />
+                            <RowDefinition Height="auto" />
+                        </Grid.RowDefinitions>
+                        <TextBlock FontWeight="Bold" Grid.Row="0" Grid.Column="0" Text="{LocText SupplierName,Suffix=':'}" Foreground="Gold">
+                        </TextBlock>
+                        <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding SelectedSupplier.Name}" />
+                        <TextBlock FontWeight="Bold" Grid.Row="0" Grid.Column="2" Text="{LocText PhoneNumber,Suffix=':'}">
+                        </TextBlock>
+                        <TextBlock Grid.Row="0" Grid.Column="3" Text="{Binding SelectedSupplier.PhoneNumberText}" />
+                        <TextBlock FontWeight="Bold" Grid.Row="1" Grid.Column="0" Text="{LocText Address,Suffix=':'}">
+                        </TextBlock>
+                        <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding SelectedSupplier.Address}" />
+                        <TextBlock FontWeight="Bold" Grid.Row="1" Grid.Column="2" Text="{LocText Note,Suffix=':'}">
+                        </TextBlock>
+                        <TextBlock Grid.Row="1" Grid.Column="3" Text="{Binding SelectedSupplier.Note}" />
+                    </Grid>
+
                     <TextBlock Text="{LocText Description}" />
                     <TextBox Text="{Binding Description}" Name="DescriptionEditor" />
                     <TextBlock Text="{LocText Amount}" />
@@ -244,8 +277,8 @@
                              Content="{Binding ApplyCreditCardTransactionCommand.Caption}" Visibility="{Binding IsPaymentButtonsVisible,Converter={StaticResource VisibilityConverter}}"/>-->
                         <!--<FlexButton:FlexButton MinWidth="100" Margin="5" Command="{Binding ApplyTicketTransactionCommand}"
                              Content="{Binding ApplyTicketTransactionCommand.Caption}" Visibility="{Binding IsPaymentButtonsVisible,Converter={StaticResource VisibilityConverter}}"/>-->
-                      <!--  <FlexButton:FlexButton HorizontalAlignment="Left" MinWidth="100" Margin="0,5,5,5" Command="{Binding ApplyTransactionCommand}"
-                             Content="{Binding ApplyTransactionCommand.Caption}" Visibility="{Binding IsTransactionButtonVisible,Converter={StaticResource VisibilityConverter}}"/>-->
+                       <FlexButton:FlexButton HorizontalAlignment="Left" MinWidth="100" Margin="0,5,5,5" Command="{Binding ApplyTransactionCommand}"
+                             Content="{Binding ApplyTransactionCommand.Caption}" Visibility="{Binding IsTransactionButtonVisible,Converter={StaticResource VisibilityConverter}}"/>
                         <FlexButton:FlexButton MinWidth="100" Margin="10,5" Command="{Binding CancelTransactionCommand}"
                              Content="{Binding CancelTransactionCommand.Caption}" />
                     </StackPanel>

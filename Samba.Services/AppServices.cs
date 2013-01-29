@@ -24,7 +24,8 @@ namespace Samba.Services
         CustomerList,
         WorkPeriods,
         Dashboard,
-        CashView
+        CashView,
+        SupplierList
     }
 
     public static class AppServices
@@ -96,7 +97,7 @@ namespace Samba.Services
 
         public static bool CanStartApplication()
         {
-            return LocalSettings.CurrentDbVersion <= 0 || LocalSettings.CurrentDbVersion == LocalSettings.DbVersion;
+            return LocalSettings.CurrentDbVersion <= 0 || LocalSettings.CurrentDbVersion >= LocalSettings.DbVersion;
         }
 
         public static bool CanModifyTicket()

@@ -55,7 +55,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>pvK87D0/Lb3FzBHrID1EKu4HG5Q=</dsig:DigestValue>
+        <dsig:DigestValue>2dfkB1v+IlURlDR2/3JIBkI+i/c=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -79,7 +79,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>3UMGhbtdG6HJjUHHnyEk62E+9CQ=</dsig:DigestValue>
+        <dsig:DigestValue>lUaw8S79JzV/mEKIcOsq3GNPdSk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -289,13 +289,13 @@
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PropertyTools.Wpf.dll" size="224256">
-      <assemblyIdentity name="PropertyTools.Wpf" version="2011.3.4774.32703" publicKeyToken="EA0C9F2B460934D0" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="PropertyTools.Wpf" version="2011.3.4777.35527" publicKeyToken="EA0C9F2B460934D0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>DtLD0PcO4BYbe6mcht1GrSvjEP8=</dsig:DigestValue>
+        <dsig:DigestValue>SaWgf6ZCj3gZFUmUmvqVAZKiBKY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -307,7 +307,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>C3kLoWwynbIpoTgRamBTPnR3B/4=</dsig:DigestValue>
+        <dsig:DigestValue>I5s4+LlwSCBH+9/LOHAHxKa63ck=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -319,7 +319,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>8CC1UOV93+yLU/4h2/Q8PoCLMGI=</dsig:DigestValue>
+        <dsig:DigestValue>dvjJrmz8kL5FWXz99IW7M0leihA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -331,19 +331,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>AjgIIVOu4q7U+kdO34f6vmXd2ww=</dsig:DigestValue>
+        <dsig:DigestValue>wHvEGXZz+j3IkWSWLsi89PSLLeM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Samba.Localization.dll" size="205824">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Samba.Localization.dll" size="207360">
       <assemblyIdentity name="Samba.Localization" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>xBexNkQVoLJkxK6RrF0ACuRSLKA=</dsig:DigestValue>
+        <dsig:DigestValue>aff7ceqlBaM7tAdUQogfLHmCVpU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -355,31 +355,31 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>688Kn6jBP4bAXyqPLjFheLVmgaE=</dsig:DigestValue>
+        <dsig:DigestValue>aso1hBK8m3Boq7XrSqTPCuZCVGs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Samba.Modules.BasicReports.dll" size="139776">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Samba.Modules.BasicReports.dll" size="138752">
       <assemblyIdentity name="Samba.Modules.BasicReports" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>5bZoLCS1f6HYcCKXkSpVXQ8pduk=</dsig:DigestValue>
+        <dsig:DigestValue>bYP6cJL1Sii8aXJ40Mwh+RiR72g=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Samba.Modules.CashModule.dll" size="32768">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Samba.Modules.CashModule.dll" size="35840">
       <assemblyIdentity name="Samba.Modules.CashModule" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>KoRFpILiXk94nxwnIbo12DVN0MM=</dsig:DigestValue>
+        <dsig:DigestValue>yOpTtxiBFm3lLLiuvflK27qNDZw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -391,7 +391,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>W0bWXjhzGJVsytU60LczdqMqAJg=</dsig:DigestValue>
+        <dsig:DigestValue>llxD/HH0/WjfDdWrPpVIa5nxWzk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -403,7 +403,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>Hv/3bNdpp/6fOKlHrAXv/PpCPk4=</dsig:DigestValue>
+        <dsig:DigestValue>D1AbI5NQ8x3IKkWHZALDTHQi0EI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -415,19 +415,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>MbpYYXqj6DpVP5WZ49BdZbvFAXQ=</dsig:DigestValue>
+        <dsig:DigestValue>nKFEiegOHDuQ/Pga0k8fgs6NL/0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Samba.Modules.InventoryModule.dll" size="49152">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Samba.Modules.InventoryModule.dll" size="49664">
       <assemblyIdentity name="Samba.Modules.InventoryModule" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>EIiG4puQwRy3DsMU4z+hrABr5Q8=</dsig:DigestValue>
+        <dsig:DigestValue>yQEsfG5ldEGu4ATYMBVZ4raasEs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -439,7 +439,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>IsJIgklmiNUt1qgAeMlaCfv3TMI=</dsig:DigestValue>
+        <dsig:DigestValue>xk3XPAk5BZ4GbXHNhgnoZPPrUMs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -451,7 +451,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>HBRh5pseF2wIhd8rkNECxLOzLKI=</dsig:DigestValue>
+        <dsig:DigestValue>wNQHiFCst1O37BVOZh+OaNDZxOo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -463,19 +463,31 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>90xMLxVLjsAGVvUzPT4BO1QlOG0=</dsig:DigestValue>
+        <dsig:DigestValue>jTCpQWKtuwxelpuVEpNAHd+caac=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Samba.Modules.TicketModule.dll" size="163328">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Samba.Modules.SupplierModule.dll" size="41472">
+      <assemblyIdentity name="Samba.Modules.SupplierModule" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>Dm/yL7JkixDmT1eWSnHTkO3uaTE=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Samba.Modules.TicketModule.dll" size="162304">
       <assemblyIdentity name="Samba.Modules.TicketModule" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>VU+AN+kYzwwqbrkTmU4G1azCgSI=</dsig:DigestValue>
+        <dsig:DigestValue>6mzEa/HgDVJej0igbORxTJHsrqM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -487,31 +499,31 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>3HYVrMIF2Uq9C7Nn3qsVpIHDSNY=</dsig:DigestValue>
+        <dsig:DigestValue>jjrgdnPoN0CZGZVMecH2pxj4JYo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Samba.Persistance.Data.dll" size="35840">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Samba.Persistance.Data.dll" size="36352">
       <assemblyIdentity name="Samba.Persistance.Data" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>P9nmhALVX33a26r5P8QIBIP6vgc=</dsig:DigestValue>
+        <dsig:DigestValue>rX28tiRK2PfBZSHmem9Uecqpxns=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Samba.Persistance.DBMigration.dll" size="34304">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Samba.Persistance.DBMigration.dll" size="35328">
       <assemblyIdentity name="Samba.Persistance.DBMigration" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>LoBHXWvniQGyNZ4jUiNKJDDuNuo=</dsig:DigestValue>
+        <dsig:DigestValue>itgIFIAg1SZZj5VUEwj0pGicLdw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -523,43 +535,43 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>DMTyBS7hFlGwFcES0/b1X+NPBGc=</dsig:DigestValue>
+        <dsig:DigestValue>3LdKgMrZoDYSZoivYpS0uX8S8x0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Samba.Presentation.Common.dll" size="323584">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Samba.Presentation.Common.dll" size="324096">
       <assemblyIdentity name="Samba.Presentation.Common" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>7+ORpJcB18XdBNlyJaDp5ZypyIo=</dsig:DigestValue>
+        <dsig:DigestValue>8tLgqB8AxmbSkxgNRut8O/X1/T8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Samba.Presentation.ViewModels.dll" size="130048">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Samba.Presentation.ViewModels.dll" size="131584">
       <assemblyIdentity name="Samba.Presentation.ViewModels" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>9K1HOJ016nd3xetTb6CQMi5ONEY=</dsig:DigestValue>
+        <dsig:DigestValue>QfbByIUYcvBbDccabeTZlvArws4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Samba.Services.dll" size="205824">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Samba.Services.dll" size="207360">
       <assemblyIdentity name="Samba.Services" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>61kjdLCjDw7WLZdOzxWUmdmTQTI=</dsig:DigestValue>
+        <dsig:DigestValue>FebP4PPuFAy/ggoKQmfJjtNR9qc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -583,7 +595,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>jVoqaprNCwCi1mOfXX/f96VcHsU=</dsig:DigestValue>
+        <dsig:DigestValue>TTnMRgZ4wAaeWm7m4CATsq1r4Ko=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -7,6 +7,7 @@ using System.Text;
 using Samba.Domain;
 using Samba.Domain.Models.Customers;
 using Samba.Domain.Models.Transactions;
+using Samba.Domain.Models.Suppliers;
 using Samba.Localization.Properties;
 using Samba.Presentation.Common;
 using Samba.Presentation.ViewModels;
@@ -109,7 +110,17 @@ namespace Samba.Modules.CashModule
                 RaisePropertyChanged("SelectedCustomer");
             }
         }
-
+        private SupplierViewModel _selectedSupplier;
+        public SupplierViewModel SelectedSupplier
+        {
+            get { return _selectedSupplier; }
+            set
+            {
+                _selectedSupplier = value;
+                RaisePropertyChanged("IsSupplierDetailsVisible");
+                RaisePropertyChanged("SelectedSupplier");
+            }
+        }
         public ICaptionCommand ActivateIncomeTransactionRecordCommand { get; set; }
         public ICaptionCommand ActivateExpenseTransactionRecordCommand { get; set; }
         public ICaptionCommand ApplyCashTransactionCommand { get; set; }
@@ -118,6 +129,7 @@ namespace Samba.Modules.CashModule
         public ICaptionCommand ApplyTransactionCommand { get; set; }
         public ICaptionCommand CancelTransactionCommand { get; set; }
         public ICaptionCommand DisplayCustomerAccountsCommand { get; set; }
+        public ICaptionCommand DisplaySupplierAccountsCommand { get; set; }
 
         private string _description;
         public string Description
@@ -173,6 +185,7 @@ namespace Samba.Modules.CashModule
         }
 
         public bool IsCustomerDetailsVisible { get { return SelectedCustomer != null; } }
+        public bool IsSupplierDetailsVisible { get { return SelectedSupplier != null; } }
         public bool IsPaymentButtonsVisible { get { return TransactionType == TransactionType.Income || TransactionType == TransactionType.Expense; } }
         public bool IsTransactionButtonVisible { get { return !IsPaymentButtonsVisible; } }
         public decimal CashIncomeTotal { get { return IncomeTransactions.Sum(x => x.CashPaymentValue); } }
@@ -196,6 +209,7 @@ namespace Samba.Modules.CashModule
             ApplyCreditCardTransactionCommand = new CaptionCommand<string>(Resources.CreditCard, OnApplyCreditCardTransaction, CanApplyTransaction);
             ApplyTicketTransactionCommand = new CaptionCommand<string>(Resources.Voucher, OnApplyTicketTransaction, CanApplyTransaction);
             DisplayCustomerAccountsCommand = new CaptionCommand<string>(Resources.CustomerAccounts, OnDisplayCustomerAccounts);
+            DisplaySupplierAccountsCommand = new CaptionCommand<string>(Resources.SupplierAccounts, OnDisplaySupplierAccounts);
         }
 
 
@@ -203,7 +217,10 @@ namespace Samba.Modules.CashModule
         {
             EventServiceFactory.EventService.PublishEvent(EventTopicNames.ActivateCustomerView);
         }
-
+        private static void OnDisplaySupplierAccounts(string obj)
+        {
+            EventServiceFactory.EventService.PublishEvent(EventTopicNames.ActivateSupplierView);
+        }
         private static bool CanActivateIncomeTransactionRecord(string arg)
         {
             return AppServices.MainDataContext.IsCurrentWorkPeriodOpen && AppServices.IsUserPermittedFor(PermissionNames.MakeCashTransaction);
@@ -214,12 +231,30 @@ namespace Samba.Modules.CashModule
             return SelectedCustomer != null ? SelectedCustomer.Id : 0;
         }
 
+        private int GetSelectedSupplierId()
+        {
+            return SelectedSupplier != null ? SelectedSupplier.Id : 0;
+        }
+
         private void OnApplyTransaction(string obj)
         {
-            if (TransactionType == TransactionType.Liability)
-                AppServices.CashService.AddLiability(GetSelectedCustomerId(), Amount, Description);
-            else if (TransactionType == TransactionType.Receivable)
-                AppServices.CashService.AddReceivable(GetSelectedCustomerId(), Amount, Description);
+            //for debit and credit
+            //it can be either customer or supplier
+            //we add to transcation type this information
+            if (IsCustomerDetailsVisible)
+            {
+                if (TransactionType == TransactionType.Liability)
+                    AppServices.CashService.AddLiability(GetSelectedCustomerId(), Amount, Description);
+                else if (TransactionType == TransactionType.Receivable)
+                    AppServices.CashService.AddReceivable(GetSelectedCustomerId(), Amount, Description);
+            }
+            if (IsSupplierDetailsVisible)
+            {
+                if (TransactionType == TransactionType.Liability)
+                    AppServices.CashService.AddLiability(GetSelectedSupplierId(), Amount, Description,false);
+                else if (TransactionType == TransactionType.Receivable)
+                    AppServices.CashService.AddReceivable(GetSelectedSupplierId(), Amount, Description,false);
+            }
             ActivateTransactionList();
         }
 
@@ -243,10 +278,21 @@ namespace Samba.Modules.CashModule
 
         private void OnApplyCashTransaction(string obj)
         {
-            if (TransactionType == TransactionType.Expense)
-                AppServices.CashService.AddExpense(GetSelectedCustomerId(), Amount, Description, PaymentType.Cash);
-            else
-                AppServices.CashService.AddIncome(GetSelectedCustomerId(), Amount, Description, PaymentType.Cash);
+            if (IsCustomerDetailsVisible)
+            {
+                if (TransactionType == TransactionType.Expense)
+                    AppServices.CashService.AddExpense(GetSelectedCustomerId(), Amount, Description, PaymentType.Cash);
+                else
+                    AppServices.CashService.AddIncome(GetSelectedCustomerId(), Amount, Description, PaymentType.Cash);
+            }
+            if (IsSupplierDetailsVisible)
+            {
+                if (TransactionType == TransactionType.Expense)
+                    AppServices.CashService.AddExpense(GetSelectedSupplierId(), Amount, Description, PaymentType.Cash,false);
+                else
+                    AppServices.CashService.AddIncome(GetSelectedSupplierId(), Amount, Description, PaymentType.Cash,false);
+            } 
+
             ActivateTransactionList();
         }
 
@@ -292,6 +338,13 @@ namespace Samba.Modules.CashModule
                 SelectedCustomer = null;
                 return;
             }
+            if (SelectedSupplier != null)
+            {
+                SelectedSupplier.Model.PublishEvent(EventTopicNames.ActivateSupplierAccount);
+                SelectedSupplier = null;
+                return;
+            }
+
             RaisePropertyChanged("IncomeTransactions");
             RaisePropertyChanged("ExpenseTransactions");
             RaisePropertyChanged("CashIncomeTotal");
@@ -323,6 +376,17 @@ namespace Samba.Modules.CashModule
             ResetTransactionData(TransactionType.Income);
             SelectedCustomer = new CustomerViewModel(customer);
         }
+        public void MakePaymentToSupplier(Supplier supplier)
+        {
+            ResetTransactionData(TransactionType.Expense);
+            SelectedSupplier = new SupplierViewModel(supplier);
+        }
+
+        internal void GetPaymentFromSupplier(Supplier supplier)
+        {
+            ResetTransactionData(TransactionType.Income);
+            SelectedSupplier = new SupplierViewModel(supplier);
+        }
 
         internal void AddLiabilityAmount(Customer customer)
         {
@@ -334,6 +398,17 @@ namespace Samba.Modules.CashModule
         {
             ResetTransactionData(TransactionType.Receivable);
             SelectedCustomer = new CustomerViewModel(customer);
+        }
+        internal void AddLiabilityAmountForSupplier(Supplier supplier)
+        {
+            ResetTransactionData(TransactionType.Liability);
+            SelectedSupplier = new SupplierViewModel(supplier);
+        }
+
+        internal void AddReceivableAmountForSupplier(Supplier supplier)
+        {
+            ResetTransactionData(TransactionType.Receivable);
+            SelectedSupplier = new SupplierViewModel(supplier);
         }
     }
 }

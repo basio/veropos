@@ -24,15 +24,7 @@ namespace Samba.Modules.InventoryModule
             return Resources.InventoryItem;
         }
 
-        private IEnumerable<string> _groupCodes;
-        public IEnumerable<string> GroupCodes { get { return _groupCodes ?? (_groupCodes = Dao.Distinct<InventoryItem>(x => x.GroupCode)); } }
-
-        public string GroupCode
-        {
-            get { return Model.GroupCode ?? ""; }
-            set { Model.GroupCode = value; }
-        }
-
+        
         public string BaseUnit
         {
             get { return Model.BaseUnit; }
@@ -73,7 +65,7 @@ namespace Samba.Modules.InventoryModule
             }
         }
 
-        public string GroupValue { get { return Model.GroupCode; } }
+        //public string GroupValue { get { return Model.GroupCode; } }
 
         protected override string GetSaveErrorMessage()
         {
